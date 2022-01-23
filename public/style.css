@@ -156,8 +156,7 @@
 .timer,
 .radio_radio,
 .table,
-.tooltip,
-.img {
+.tooltip {
   margin-left: 20px;
 }
 
@@ -758,7 +757,7 @@ tr:nth-child(odd):hover,
 
 /* NAV */
 .nav-bar {
-  height: 5rem;
+  height: 68px;
   width: 99.9%;
   background-image: linear-gradient(to right, #f3e9e9, #f1f5f4);
   border: 2px solid black;

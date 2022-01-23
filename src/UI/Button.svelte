@@ -16,6 +16,5 @@
   {#if href}
     <a class="link" {href}>{caption}</a>
   {:else}
-    <!-- svelte-ignore a11y-accesskey -->
     <button class="{mode} {color} {style} {margin}" {type} {id} {name} {disabled} aria-label={caption} tabindex=0 on:click>{caption}</button>
   {/if}

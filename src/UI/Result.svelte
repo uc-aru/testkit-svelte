@@ -59,7 +59,7 @@
         $disable2 = true;
       }
       if (jump > 0) {
-        $disable1.set(false);
+        disable1.set(false);
       }
     }
     selectedanswer.subscribe((items) => {
