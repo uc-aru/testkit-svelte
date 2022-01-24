@@ -1,15 +1,21 @@
 <script>
-import Nav from './UI/Navigation.svelte'
-import Button from './UI/Button.svelte';
-  import Footer from './UI/Footer.svelte';
-  import EndTestModal from './UI/Modal.svelte';
-  import Result from './UI/Result.svelte';
-  import List from './UI/Listing.svelte';
-  import { current,currentitem,counter,startpage,isconfirm,list,isopen } from './dataStore';
-  let startloading = false;
-  let timer;
-  let isend = false;
-  let firstpage = false;
+  import Nav from "./UI/Navigation.svelte";
+  import Button from "./UI/Button.svelte";
+  import Footer from "./UI/Footer.svelte";
+  import EndTestModal from "./UI/Modal.svelte";
+  import Result from "./UI/Result.svelte";
+  import List from "./UI/Listing.svelte";
+  import { current } from "./dataStore.js";
+  import { currentitem } from "./dataStore.js";
+  import { counter } from "./dataStore.js";
+  import { startpage } from "./dataStore.js";
+  import { isconfirm } from "./dataStore.js";
+  import { list } from "./dataStore.js";
+  import { isopen } from "./dataStore.js";
+  var startloading = false;
+  var timer;
+  var isend = false;
+  var firstpage = false;
 
   function tooglestartpage() {
     startloading = true;
@@ -69,11 +75,12 @@ import Button from './UI/Button.svelte';
   function review() {
     isconfirm.set(false);
   }
+
 </script>
 
 <link rel="stylesheet" href="style.css" />
 <header>
-  <Nav Heading={'uCertify Test Prep'} />
+  <Nav Heading={"uCertify Test Prep"} />
 </header>
 <main>
   {#if $startpage}
@@ -83,36 +90,16 @@ import Button from './UI/Button.svelte';
     {/if}
 
     {#if $isconfirm}
-      <Button
-        class="success"
-        type="button"
-        id="Start"
-        name="Start"
-        caption="Start Test"
-        on:click={tooglestartpage}
-      />
+      <Button class="success" type="button" id="Start" name="Start" caption="Start Test" on:click={tooglestartpage} />
       <Result on:res={review} />
     {:else}
-      <Button
-        style="button"
-        margin="btn"
-        type="button"
-        id="Start"
-        name="Start"
-        accesskey="s"
-        caption="Start Test"
-        on:click={tooglestartpage}
-      />
+    <!-- s for Start the test the button -->
+      <Button style="button" margin="btn" type="button" id="Start" name="Start" accesskey=s caption="Start Test" on:click={tooglestartpage} />
     {/if}
+
   {:else if !$startpage}
     {#if firstpage}
-      <Footer
-        on:l={listopen}
-        on:click={open}
-        on:n={next}
-        on:p={prev}
-        on:e={end}
-      />
+      <Footer on:l={listopen} on:click={open} on:n={next} on:p={prev} on:e={end} />
     {/if}
   {/if}
 

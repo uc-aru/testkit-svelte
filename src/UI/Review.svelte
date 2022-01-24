@@ -99,14 +99,15 @@
             {/if}
           </div>
           <div class="bottom-nav">
-            <Button style="button" margin="btn-bottom" type="button" id="prev" name="prev" accesskey=p caption="Previous" disabled={$disable2}
+          <!-- p for previous the button ,n for Next the button and r for Refresh whole page(Dashboard)-->
+            <Button style="button" margin="btn-bottom" type="button" id="prev" name="prev" accesskey='p' caption="Previous" disabled={$disable2}
               on:click={prev}/>
             <div class="numbering" tabindex="0">
               <b>{i + 1} of 11</b>
             </div>
-            <Button style="button" margin="btn-bottom" type="button" id="next" name="next" accesskey=n caption="Next" disabled={$disable1}
+            <Button style="button" margin="btn-bottom" type="button" id="next" name="next" accesskey='n' caption="Next" disabled={$disable1}
               on:click={next}/>
-            <Button style="button" margin="btn-bottom" type="button" id="dash" name="dash" accesskey=b caption="DashBoard" on:click={dash}/>
+            <Button style="button" margin="btn-bottom" type="button" id="dash" name="dash" accesskey='r' caption="DashBoard" on:click={dash}/>
           </div>
         {/if}
       {/each}

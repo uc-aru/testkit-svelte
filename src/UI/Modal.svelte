@@ -61,10 +61,11 @@
     <div class="footer pos-fixed">
       <slot name="footer">
         <div class="btn-primary">
-          <Button type="button" style="button" id="close" name="Close" accesskey=c caption="Close" on:click={closeModal}/>
+          <!-- c for Close the button and e Confirm the button -->
+          <Button type="button" style="button" id="close" name="Close" accesskey='c' caption="Close" on:click={closeModal}/> 
         </div>
         <div class="btn-primary">
-          <Button type="button" style="button" id="confirm" name="Confirm" accesskey=r caption="Confirm" on:click={confirmModal}/>
+          <Button type="button" style="button" id="confirm" name="Confirm" accesskey='e' caption="Confirm" on:click={confirmModal}/>
         </div>
       </slot>
     </div>
