@@ -8,8 +8,7 @@
   import { current } from "./dataStore.js";
   import { currentitem } from "./dataStore.js";
   import { counter } from "./dataStore.js";
-  import { startpage } from "./dataStore.js";
-  import { isconfirm } from "./dataStore.js";
+  import { startpage,isconfirm } from "./dataStore.js";
   import { list } from "./dataStore.js";
   import { isopen } from "./dataStore.js";
   var startloading = false;
